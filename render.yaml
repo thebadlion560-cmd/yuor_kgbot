@@ -1,0 +1,12 @@
+services:
+  - type: worker
+    name: telegram-otp-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        value: "7877065424:AAF7AoN0g62kVrOeBf5d6C8EjCL8X1aAvMQ"
+      - key: ADMIN_ID
+        value: "7317989292"
